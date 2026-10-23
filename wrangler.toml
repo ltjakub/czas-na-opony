@@ -1,0 +1,24 @@
+name = "czas-na-opony"
+main = "src/index.js"
+compatibility_date = "2025-06-01"
+
+# Logi i metryki Workera w dashboardzie (darmowe)
+[observability]
+enabled = true
+
+# Własna domena (zalecane: Cache API i dobre SEO działają tylko na własnej domenie).
+# Odkomentuj po dodaniu domeny do Cloudflare:
+# routes = [{ pattern = "twojadomena.pl", custom_domain = true }]
+
+[vars]
+SITE_URL = "https://czas-na-opony.TWOJA-NAZWA.workers.dev"   # po podpięciu domeny zmień na https://twojadomena.pl
+SITE_NAME = "Czas na opony"
+CONTACT_EMAIL = "kontakt@twojadomena.pl"                    # trafia do User-Agenta (wymóg MET Norway) i do polityki prywatności
+
+# --- AFILIACJA (puste = blok się nie wyświetla) ---
+AFF_TIRENDO_URL = "google.pl"
+AFF_OPONYTANIO_URL = "google.pl"
+
+# --- opcjonalne ---
+CF_BEACON_TOKEN = "google.pl"              # token Cloudflare Web Analytics (bez cookies)
+SHOW_AFFILIATE_PLACEHOLDER = "google.pl"   # "1" = pokaż przerywane pudełko tam, gdzie pojawią się linki (tylko do podglądu)
